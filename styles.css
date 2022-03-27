@@ -1,0 +1,58 @@
+body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    background-color: #1F2833;
+}
+
+/* Heading Section */
+#heading {
+    text-align: center;
+    flex: 1;
+    font-size: 64px;
+    font-weight: 900;
+    background-color: #0B0C10;
+    color: #F9FAF8;
+    padding: 48px;
+}
+
+/* Button Section */
+#buttons {
+    margin: 100px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+#buttons button {
+    font-size: 36px;
+    font-family: inherit;
+    flex: 1;
+    padding: 25px;
+    background-color: #45A29E;
+    color: #F9FAF8;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #C5C6C7;
+    min-height: 200px;
+}
+
+#buttons button:hover {
+    border-color: #66FCF1;
+    transform: scale(1.1);
+}
+
+#buttons button:active {
+    background-color: #66FCF1;
+}
+
+/* Result Text */
+#result {
+    color: white;
+    flex: 1;
+    text-align: center;
+    font-size: 48px;
+}

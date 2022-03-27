@@ -1,4 +1,12 @@
 /**
+ * Get the buttons and the result text
+ */
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+const result = document.querySelector("#result");
+
+/**
  * Simulates the computer's move.
  * 
  * @returns either rock, paper, or scissors
@@ -48,10 +56,18 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("enter selection");
-        result = playRound(playerSelection, computerPlay());
-        console.log(result);
-    }
+/**
+ * Setting up event listeners on the buttons
+ */
+rock.addEventListener('click', () => play("rock"));
+paper.addEventListener('click', () => play("paper"));
+scissors.addEventListener('click', () => play("scissors"));
+
+
+/**
+ * Plays the game with a given player input
+ */
+function play(choice) {
+    const gameResult = playRound(choice, computerPlay());
+    result.textContent = gameResult;  
 }
